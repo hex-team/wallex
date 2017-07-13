@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="PanoramaImageView">
+        <attr name="piv_enablePanoramaMode" format="boolean" />
+        <attr name="piv_invertScrollDirection" format="boolean" />
+        <attr name="piv_show_scrollbar" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomTextView">
+        <attr name="font" format="enum">
+            <enum name="IranSans" value="0"></enum>
+            <enum name="IranSansLight" value="1"></enum>
+            <enum name="IranSansUltraLight" value="2"></enum>
+            <enum name="IranSansMedium" value="3"></enum>
+            <enum name="IranSansBold" value="4"></enum>
+        </attr>
+    </declare-styleable>
+
+
+</resources>

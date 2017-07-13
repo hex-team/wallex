@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Wallex</string>
+
+    <string name="share">SHARE</string>
+    <string name="save">SAVE</string>
+    <string name="wallpaper">WALLPAPER</string>
+
+    <string name="news">NEW</string>
+    <string name="featured">FEATURED</string>
+
+</resources>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white">
+
+
+    <team.hex.wallpaper.ui.widget.PanoramaImageView
+        android:id="@+id/photoView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:foreground="@drawable/photo_overlay"/>
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:id="@+id/photoLoading"
+        app:indicatorColor="@android:color/white"
+        android:alpha="0.5"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="16dp"
+        app:indicatorName="BallClipRotateMultipleIndicator"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/profileContainer"
+        android:layout_alignParentBottom="true">
+
+
+        <team.hex.wallpaper.ui.widget.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtName"
+            android:textColor="@android:color/white"
+            android:textSize="14dp"
+            android:layout_gravity="bottom"
+            android:paddingLeft="5dp"
+            app:font="IranSansBold"
+            />
+
+        <team.hex.wallpaper.ui.widget.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtRegion"
+            android:textColor="@android:color/white"
+            android:textSize="10dp"
+            android:layout_gravity="bottom"
+            app:font="IranSansUltraLight"
+            />
+
+    </LinearLayout>
+
+    <team.hex.wallpaper.ui.widget.PhotoOptionView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/photoOption"
+        android:visibility="gone"/>
+
+
+
+</RelativeLayout>

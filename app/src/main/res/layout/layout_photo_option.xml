@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:alpha="0"
+    android:id="@+id/optionLayout"
+    android:background="@color/colorGrayDarkOverlay">
+
+
+    <team.hex.wallpaper.ui.widget.CustomButton
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:background="@drawable/button_frame"
+        android:maxLines="1"
+        android:textColor="@android:color/white"
+        android:clickable="true"
+        android:text="@string/share"
+        android:textSize="13dp"
+        android:id="@+id/btnShare"
+        app:font="IranSansMedium"
+        />
+
+
+    <team.hex.wallpaper.ui.widget.CustomButton
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:background="@drawable/button_frame"
+        android:maxLines="1"
+        android:clickable="true"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="20dp"
+        android:id="@+id/btnSave"
+        android:text="@string/save"
+        android:textSize="13dp"
+        app:font="IranSansMedium"
+        />
+
+
+    <team.hex.wallpaper.ui.widget.CustomButton
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:background="@drawable/button_frame"
+        android:textColor="@android:color/white"
+        android:clickable="true"
+        android:maxLines="1"
+        android:id="@+id/btnWallpaper"
+        android:layout_marginTop="20dp"
+        android:text="@string/wallpaper"
+        android:textSize="13dp"
+        app:font="IranSansMedium"
+        />
+
+
+</LinearLayout>
