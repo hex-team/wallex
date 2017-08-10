@@ -3,14 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@android:color/black">
 
 
     <com.wang.avi.AVLoadingIndicatorView
         android:layout_width="25dp"
         android:layout_height="25dp"
         android:id="@+id/listLoading"
-        app:indicatorColor="@android:color/black"
+        app:indicatorColor="@android:color/white"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="30dp"
@@ -20,12 +21,16 @@
 
 
 
-    <team.hex.wallpaper.ui.widget.SnappyRecyclerView
+    <team.hex.wallex.ui.widget.SnappyRecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scrollbars="vertical"
         android:id="@+id/lstNew"
-        />
+        app:tension="1000"
+        app:friction="150"
+        app:gapLimit="150"
+        app:speedFactor="5"
+        app:viewCountEstimateSize="30"/>
 
 
 

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:layout_gravity="bottom"
+    android:background="@color/colorBlackOverlay">
+
+
+
+    <team.hex.wallex.ui.widget.CustomButton
+        android:layout_width="240dp"
+        android:layout_height="40dp"
+        android:textColor="@color/colorBlackOverlay"
+        android:id="@+id/btnRateUs"
+        app:font="IranSansBold"
+        android:textSize="17dp"
+        android:text="@string/rateUs"
+        android:background="@drawable/yellow_button_bg"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"/>
+
+
+
+        <team.hex.wallex.ui.widget.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:id="@+id/btnGotoOurSite"
+            android:textColor="#8b8b8b"
+            android:textSize="10dp"
+            android:layout_marginBottom="15dp"
+            app:font="IranSans"
+            android:text="@string/designedByUs"/>
+
+
+
+</RelativeLayout>

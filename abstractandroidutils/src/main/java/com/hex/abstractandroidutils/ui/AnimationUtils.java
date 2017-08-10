@@ -6,6 +6,7 @@ import android.content.Context;
 import android.support.annotation.AnimRes;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AccelerateDecelerateInterpolator;
 import android.view.animation.Animation;
 import android.view.animation.Transformation;
 import android.view.animation.TranslateAnimation;
@@ -89,7 +90,6 @@ public class AnimationUtils {
     public static Animation resAnimationLoader(@AnimRes int animResId, Context context) {
         return android.view.animation.AnimationUtils.loadAnimation(context, animResId);
     }
-
 
 
 

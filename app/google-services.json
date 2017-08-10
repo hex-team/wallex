@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "389819839833",
+    "firebase_url": "https://wallex-android.firebaseio.com",
+    "project_id": "wallex-android",
+    "storage_bucket": "wallex-android.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:389819839833:android:898eed59f427a26b",
+        "android_client_info": {
+          "package_name": "team.hex.wallex"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "389819839833-r9gkgpcvm7lsdmt7cidarn87s8f8u1em.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "team.hex.wallex",
+            "certificate_hash": "7516e9ff4dda21c9aba65a1e76a506cde1eb1a21"
+          }
+        },
+        {
+          "client_id": "389819839833-f3hfvhkduehrc3gbp6n6qdv5lli3i0kl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3kL1yFFU-JgVFzobgqW_raBpbXn5EtDU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "389819839833-f3hfvhkduehrc3gbp6n6qdv5lli3i0kl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

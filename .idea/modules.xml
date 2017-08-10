@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/X.Wallpaper.iml" filepath="$PROJECT_DIR$/X.Wallpaper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Wallex.iml" filepath="$PROJECT_DIR$/Wallex.iml" />
       <module fileurl="file://$PROJECT_DIR$/abstractandroidutils/abstractandroidutils.iml" filepath="$PROJECT_DIR$/abstractandroidutils/abstractandroidutils.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/overscrollbouncy/overscrollbouncy.iml" filepath="$PROJECT_DIR$/overscrollbouncy/overscrollbouncy.iml" />
     </modules>
   </component>
 </project>

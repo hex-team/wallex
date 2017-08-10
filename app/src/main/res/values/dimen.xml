@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <dimen name="LogoSize">290dp</dimen>
+
+    <fraction name="PivotXAnim">60%</fraction>
+    <fraction name="PivotYAnim">38%</fraction>
+
+    <dimen name="indicatorMargin">20dp</dimen>
+</resources>

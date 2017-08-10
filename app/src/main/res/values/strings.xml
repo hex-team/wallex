@@ -1,11 +1,27 @@
 <resources>
     <string name="app_name">Wallex</string>
 
-    <string name="share">SHARE</string>
-    <string name="save">SAVE</string>
-    <string name="wallpaper">WALLPAPER</string>
+    <string name="share">اشتراک‌‌‌‌‌‌‌‌‌‌گذاری</string>
+    <string name="save">ذخیره</string>
+    <string name="wallpaper">پس‌زمینه</string>
 
     <string name="news">NEW</string>
     <string name="featured">FEATURED</string>
 
+    <string name="rateUs">امتیـاز دهیــد</string>
+
+    <string name="designedByUs">{ designed &amp; Powered by Hex.team }</string>
+
+    <string name="hexUrl">http://hex.team</string>
+
+    <string name="unsplashUrl">https://unsplash.com/</string>
+
+    <string name="introduction">برای مشاهده امکانات تصاویر، انگشت خود را روی صفحه نگه دارید</string>
+    <string name="getPermission">با زدن دکمه زیر اجازه ذخیره \n کردن تصاویر در گوشی خود را \n صادر کنید</string>
+
+    <string name="permissionToStorage">دسترسی به حافظه گوشی</string>
+    <string name="start">شروع کار با نرم‌افزار</string>
+    
+    <string name="wallex">والِکس</string>
+    <string name="introduction_main">ارایه شده توسط جامعه‌ای از بهترین عکاس‌های آزاد دنیا</string>
 </resources>

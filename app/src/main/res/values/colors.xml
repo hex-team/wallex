@@ -6,4 +6,10 @@
 
     <color name="colorGrayDark">#1a1a1a</color>
     <color name="colorGrayDarkOverlay">#dd1a1a1a</color>
+
+    <color name="colorBlackOverlay">#d8000000</color>
+
+    <color name="colorTextGray">#8b8b8b</color>
+
+    <color name="colorYellow">#EAC71B</color>
 </resources>

@@ -14,6 +14,7 @@
             <enum name="IranSansUltraLight" value="2"></enum>
             <enum name="IranSansMedium" value="3"></enum>
             <enum name="IranSansBold" value="4"></enum>
+            <enum name="LalezarRegular" value="5"></enum>
         </attr>
     </declare-styleable>
 

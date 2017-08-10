@@ -4,11 +4,11 @@ android {
     compileSdkVersion 25
     buildToolsVersion "25.0.0"
     defaultConfig {
-        applicationId "team.hex.wallpaper"
+        applicationId "team.hex.wallex"
         minSdkVersion 19
         targetSdkVersion 25
-        versionCode 1
-        versionName "1.0"
+        versionCode 1000
+        versionName "1.0.0.0"
     }
     buildTypes {
         release {
@@ -21,19 +21,23 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile project(':abstractandroidutils')
+    compile project(':overscrollbouncy')
     compile 'com.android.support:design:25.3.1'
     compile 'com.jakewharton:butterknife:8.6.0'
-    annotationProcessor 'com.jakewharton:butterknife-compiler:8.6.0'
     compile 'com.squareup.picasso:picasso:2.5.2'
     compile 'com.squareup.retrofit2:retrofit:2.3.0'
     compile 'com.squareup.retrofit2:converter-gson:2.1.0'
     compile 'de.hdodenhof:circleimageview:2.1.0'
     compile 'com.wang.avi:library:2.1.3'
-
     compile 'com.github.bumptech.glide:glide:3.7.0'
     compile 'com.github.bumptech.glide:okhttp3-integration:1.4.0@aar'
-
-    compile 'com.chauthai.overscroll:overscroll-bouncy:0.1.1'
-
     compile 'org.greenrobot:eventbus:3.0.0'
+    compile 'com.google.firebase:firebase-crash:10.0.1'
+    compile 'com.google.firebase:firebase-core:10.0.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.6.0'
+    compile 'me.relex:circleindicator:1.2.2@aar'
 }
+
+
+
+apply plugin: 'com.google.gms.google-services'

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <team.hex.wallex.ui.widget.LogoView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:paddingBottom="20dp">
+
+
+
+        <team.hex.wallex.ui.widget.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            app:font="LalezarRegular"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/wallex"
+            android:textStyle="bold"
+            android:textSize="32dp"/>
+
+
+        <team.hex.wallex.ui.widget.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            app:font="IranSansBold"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/introduction_main"
+            android:textSize="15dp"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
