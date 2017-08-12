@@ -7,11 +7,16 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.hex.abstractandroidutils.tools.AppUtils;
 import com.wang.avi.AVLoadingIndicatorView;
+
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
+
 import java.util.List;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import retrofit2.Call;
@@ -71,7 +76,7 @@ public class NewFragment extends BasePhotoFragment {
         lstNew.addOnScrollListener(new RecyclerView.OnScrollListener() {
             @Override
             public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
-                if(newState == SCROLL_STATE_IDLE && isOnOption)
+                if (newState == SCROLL_STATE_IDLE && isOnOption)
                     layoutManager.setScrollEnabled(false);
             }
         });
@@ -80,23 +85,25 @@ public class NewFragment extends BasePhotoFragment {
 
     @Override
     public void onLoadData(Call<List<Photo>> call, Response<List<Photo>> response, int page) {
-       photoAdapter.insertMultipleItems(response.body());
-        if(listLoading.getVisibility() != View.VISIBLE)
+        photoAdapter.insertMultipleItems(response.body());
+        if (listLoading.getVisibility() != View.VISIBLE)
             listLoading.setVisibility(View.VISIBLE);
-        if(page == 1)
+        if (page == 1)
             EventBus.getDefault().post(new MessageEvent(MessageEvent.Message.loadComplete));
     }
 
 
     @Override
     public void noDataFound(int page) {
-        if(listLoading.getVisibility() == View.VISIBLE)
+        if (listLoading.getVisibility() == View.VISIBLE)
             listLoading.setVisibility(View.GONE);
     }
 
     @Override
     public void onLoadFailed(Call<List<Photo>> call, Throwable t, int page) {
         t.printStackTrace();
+        if (!AppUtils.isOnline(getContext()))
+            EventBus.getDefault().post(new MessageEvent(MessageEvent.Message.loadError));
     }
 
 
@@ -112,10 +119,10 @@ public class NewFragment extends BasePhotoFragment {
 
     @Override
     public void onOption(boolean onOption, int adapterPosition) {
-        if(onOption) {
+        if (onOption) {
             isOnOption = onOption;
             lstNew.smoothScrollToPosition(adapterPosition);
-            if(lstNew.getVerticalScrollOffset() % photoAdapter.getViewHeight() == 0)
+            if (lstNew.getVerticalScrollOffset() % photoAdapter.getViewHeight() == 0)
                 layoutManager.setScrollEnabled(false);
         } else {
             isOnOption = onOption;
@@ -125,12 +132,11 @@ public class NewFragment extends BasePhotoFragment {
     }
 
 
-
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void onMessageEvent(MessageEvent event) {
         switch (event.getMessage()) {
             case backPress: {
-                if(event.getTextMessage() == NewFragment.class.getName()) {
+                if (event.getTextMessage() == NewFragment.class.getName()) {
                     lstNew.smoothScrollToPosition(0);
                 }
             }
@@ -153,6 +159,6 @@ public class NewFragment extends BasePhotoFragment {
 
     @Override
     public void onFirstPhotoLoad() {
-       // EventBus.getDefault().post(new MessageEvent(MessageEvent.Message.loadComplete));
+        // EventBus.getDefault().post(new MessageEvent(MessageEvent.Message.loadComplete));
     }
 }

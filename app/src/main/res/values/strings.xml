@@ -15,6 +15,7 @@
     <string name="hexUrl">http://hex.team</string>
 
     <string name="unsplashUrl">https://unsplash.com/</string>
+    <string name="cafeBazaarUrl">https://cafebazaar.ir/</string>
 
     <string name="introduction">برای مشاهده امکانات تصاویر، انگشت خود را روی صفحه نگه دارید</string>
     <string name="getPermission">با زدن دکمه زیر اجازه ذخیره \n کردن تصاویر در گوشی خود را \n صادر کنید</string>
@@ -24,4 +25,15 @@
     
     <string name="wallex">والِکس</string>
     <string name="introduction_main">ارایه شده توسط جامعه‌ای از بهترین عکاس‌های آزاد دنیا</string>
+
+    <string name="noTablet">در حال حاضر والکس از تبلت پشتیبانی نمی‌کند!</string>
+
+    <string name="noInternet">خطا در اتصال به اینترنت!</string>
+    <string name="wifi">وای‌فای</string>
+
+    <string name="ok">بستن</string>
+    <string name="internetSettings">تنظیمات</string>
+    <string name="cafeBazaar">کافه بازار</string>
+
+    <string name="bazaarNotInstalled">بازار نصب نیست!</string>
 </resources>

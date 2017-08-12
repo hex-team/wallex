@@ -1,6 +1,16 @@
 apply plugin: 'com.android.application'
 
 android {
+    defaultPublishConfig "release"
+    signingConfigs {
+        wallexApp {
+            keyAlias '@wallex'
+            keyPassword '123@321'
+            storeFile file('/Users/alirezarashidi/Desktop/Wallex/wallex_key.jks')
+            storePassword '123@321'
+        }
+    }
+
     compileSdkVersion 25
     buildToolsVersion "25.0.0"
     defaultConfig {
@@ -10,12 +20,22 @@ android {
         versionCode 1000
         versionName "1.0.0.0"
     }
+
     buildTypes {
-        release {
+        debug {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.wallexApp
+        }
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            debuggable false;
+            signingConfig signingConfigs.wallexApp
         }
     }
+
+
 }
 
 dependencies {

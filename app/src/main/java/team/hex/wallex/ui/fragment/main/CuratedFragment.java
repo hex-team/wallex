@@ -7,6 +7,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.hex.abstractandroidutils.tools.AppUtils;
 import com.wang.avi.AVLoadingIndicatorView;
 
 import org.greenrobot.eventbus.EventBus;
@@ -117,6 +119,8 @@ public class CuratedFragment extends BasePhotoFragment {
     @Override
     public void onLoadFailed(Call<List<Photo>> call, Throwable t, int page) {
         t.printStackTrace();
+        if (!AppUtils.isOnline(getContext()))
+            EventBus.getDefault().post(new MessageEvent(MessageEvent.Message.loadError));
     }
 
 

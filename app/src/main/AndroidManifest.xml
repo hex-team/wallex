@@ -11,7 +11,7 @@
 
     <supports-screens
         android:anyDensity="true"
-        android:largeScreens="true"
+        android:largeScreens="false"
         android:normalScreens="true"
         android:smallScreens="true" />
 
@@ -39,6 +39,9 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".ui.activity.NoTabletActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
 
     </application>
 

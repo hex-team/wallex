@@ -37,6 +37,9 @@
         <item name="android:windowExitAnimation">@anim/zoom_in</item>
     </style>
 
+    <style name="dialogWindowAnimation">
+        <item name="android:windowEnterAnimation">@anim/scale_animation</item>
+    </style>
 
     <style name="bottomDialog" parent="Theme.Design.Light.BottomSheetDialog">
         <item name="android:windowCloseOnTouchOutside">false</item>

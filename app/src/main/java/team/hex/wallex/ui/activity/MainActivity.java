@@ -22,6 +22,9 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
+
+import com.hex.abstractandroidutils.ui.UiUtils;
+
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
@@ -38,6 +41,8 @@ import team.hex.wallex.common.utils.Font;
 import team.hex.wallex.common.utils.GyroscopeObserver;
 import team.hex.wallex.common.utils.OnSwipeTouchListener;
 import team.hex.wallex.ui.adapter.PagerAdapterCreator;
+import team.hex.wallex.ui.dialog.NoBazaarFoundDialog;
+import team.hex.wallex.ui.dialog.NoInternetDialog;
 import team.hex.wallex.ui.dialog.SplashDialog;
 import team.hex.wallex.ui.fragment.introduction.GetPermissionFragment;
 import team.hex.wallex.ui.fragment.introduction.IntroductionFragment;
@@ -99,6 +104,9 @@ public class MainActivity extends BaseActivity implements ViewPager.OnPageChange
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        if(UiUtils.isTablet(this))
+            startActivity(new Intent(this, NoTabletActivity.class));
+
         logEvent();
 
         initSplash();
@@ -117,6 +125,19 @@ public class MainActivity extends BaseActivity implements ViewPager.OnPageChange
         splashDialog.get().setCancelable(false);
         splashDialog.get().show(getFragmentManager(), "splash");
     }
+
+    private void showInternetError() {
+        NoInternetDialog internetDialog = new NoInternetDialog();
+        internetDialog.setCancelable(false);
+        internetDialog.show(getFragmentManager(), "internetDialog");
+    }
+
+    private void showBazaarError() {
+        NoBazaarFoundDialog noBazaarFoundDialog = new NoBazaarFoundDialog();
+        noBazaarFoundDialog.setCancelable(false);
+        noBazaarFoundDialog.show(getFragmentManager(), "noBazaarFoundDialog");
+    }
+
 
     private void init() {
 
@@ -156,6 +177,15 @@ public class MainActivity extends BaseActivity implements ViewPager.OnPageChange
                         @Override
                         public void onClick(View view) {
                             bottomSheetDialog.dismiss();
+                            Intent intent = new Intent(Intent.ACTION_EDIT);
+                            try {
+                                intent.setData(Uri.parse("bazaar://details?id=" + getPackageName()));
+                                intent.setPackage("com.farsitel.bazaar");
+                                startActivity(intent);
+                            } catch (Exception e) {
+                                e.printStackTrace();
+                                showBazaarError();
+                            }
                         }
                     });
                     btnGotoOurSite.setOnClickListener(new View.OnClickListener() {
@@ -266,6 +296,12 @@ public class MainActivity extends BaseActivity implements ViewPager.OnPageChange
                     }
                 }, 10);
             }
+            break;
+            case loadError: {
+                if(splashDialog.get() != null ? splashDialog.get().isShowing() : false)
+                showInternetError();
+            }
+            break;
         }
     }
 

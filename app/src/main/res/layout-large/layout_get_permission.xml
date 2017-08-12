@@ -17,7 +17,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             app:font="IranSansBold"
-            android:textSize="23dp"
+            android:textSize="20dp"
             android:text="@string/getPermission"
             android:gravity="center"
             android:textColor="@android:color/white"

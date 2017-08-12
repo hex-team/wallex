@@ -24,6 +24,11 @@
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
 
+-ignorewarnings
+-keep class * {
+    public private *;
+}
+
 -dontwarn okio.**
 -dontwarn javax.annotation.**
 
